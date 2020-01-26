@@ -1,0 +1,29 @@
+{
+  "name": "Data-Modeling-NoSQL-DB",
+  "version": "1.0.0",
+  "description": "# LAB - Class 05",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint **/*.js",
+    "test": "jest --coverage --verbose",
+    "test-watch": "jest --watchAll --coverage --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB/issues"
+  },
+  "homepage": "https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB#readme",
+  "dependencies": {
+    "@code-fellows/supergoose": "^1.0.1",
+    "eslint": "^6.8.0",
+    "jest": "^25.1.0",
+    "mongoose": "^5.8.9",
+    "supergoose": "^0.2.6"
+  }
+}
