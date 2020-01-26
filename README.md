@@ -6,7 +6,7 @@
 
 ### Links and Resources
 
-- [submission PR]()
+- [submission PR](https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB/pull/1)
 - [ci/cd]() (GitHub Actions)
 
 ### Setup
