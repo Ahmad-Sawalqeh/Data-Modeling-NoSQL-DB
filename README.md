@@ -6,8 +6,8 @@
 
 ### Links and Resources
 
-- [submission PR]()
-- [ci/cd]() (GitHub Actions)
+- [submission PR](https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB/pull/1)
+- [ci/cd](https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB/runs/424175973?check_suite_focus=true) (GitHub Actions)
 
 ### Setup
 run `npm i`
@@ -19,3 +19,7 @@ run `npm test` to check all test.
 
 - How do you run tests?<br>
   run `npm test`
+
+## UML
+
+![](./assert/data-model-with-mongodb.jpeg)
