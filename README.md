@@ -7,7 +7,7 @@
 ### Links and Resources
 
 - [submission PR](https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB/pull/1)
-- [ci/cd]() (GitHub Actions)
+- [ci/cd](https://github.com/Ahmad-Sawalqeh/Data-Modeling-NoSQL-DB/runs/424175973?check_suite_focus=true) (GitHub Actions)
 
 ### Setup
 run `npm i`
