@@ -1,63 +1,66 @@
-// eslint-disable-next-line strict
+/* eslint-disable camelcase */
+/* eslint-disable strict */
 'use strict';
 
 require('@code-fellows/supergoose');
 
-const Product = require('../products/products.js');
-const product = new Product();
+const Products = require('../products/products.js');
 
-describe('Product Model', () => {
-  it('can create() a new product item', () => {
-    let obj = { name: 'iphone', price: 956, company: 'apple', type: 'electronic' };
+const product = new Products();
 
-    return product.create(obj)
+describe(' Categories Testing ', () => {
+
+  it(' can get() any product ', () => {
+    let newRec = { price: 14 , weight:47 ,quantity_in_stock :10 };
+
+    return product.create(newRec)
       .then(record => {
-        Object.keys(obj).forEach(key => {
-          expect(record[key]).toEqual(obj[key]);
+        return product.get(record._id)
+          .then(proItem => {
+            Object.keys(newRec).forEach(key => {
+              expect(proItem[key]).toEqual(newRec[key]);
+            });
+          });
+      })
+      .catch(e => console.error('ERR', e));
+  });
+
+  it(' can create() A new product ', () => {
+    let newRec = { price: 14 , weight:47 ,quantity_in_stock :10 };
+    return product.create(newRec)
+      .then(record => {
+        Object.keys(newRec).forEach(key => {
+          expect(record[key]).toEqual(newRec[key]);
         });
-      });
+      })
+      .catch(e => console.error('ERR', e));
   });
 
-  it('can get() a product item', () => {
-    let obj = { name: 'S10+', price: 859, company: 'samsung', type: 'electronic'};
-
-    return product.create(obj)
+  it(' can update() A product ', () => {
+    let newRec = { price: 14 , weight:47 ,quantity_in_stock :10 };
+    return product.create(newRec)
       .then(record => {
-        return product.get(record._id)
-          .then(productItem => {
-            Object.keys(obj).forEach(key => {
-              expect(productItem[key]).toEqual(obj[key]);
+        return product.update(record._id, record)
+          .then(proItem => {
+            Object.keys(newRec).forEach(key => {
+              expect(proItem[key]).toEqual(newRec[key]);
             });
           });
-      });
+      })
+      .catch(e => console.error('ERR', e));
   });
 
-  it.skip('can update() a product item', () => {
-    let obj = { name: 'carpet', price: 159, company: 'seda', type: 'furniture'};
-
-    return product.create(obj)
+  it(' can Delete() A product ', () => {
+    let newRec = { price: 14 , weight:47 ,quantity_in_stock :10 };
+    return product.create(newRec)
       .then(record => {
-        let newData = record.price;
-        newData = 149;
-        return product.update(record._id, newData)
-          .then(productItem => {
-            expect(productItem.price).toEqual(149);
-          });
-      });
-  });
-
-  it.skip('can delete() a product item', () => {
-    let obj = { name: 'S10+', price: 859, company: 'samsung', type: 'electronic'};
-
-    return product.create(obj)
-      .then(record => {
-        return product.get(record._id)
-          .then(productItem => {
-            Object.keys(obj).forEach(key => {
-              expect(productItem[key]).toEqual(obj[key]);
+        return product.delete(record._id, record)
+          .then(proItem => {
+            Object.keys(newRec).forEach(key => {
+              expect(proItem[key]).toEqual(newRec[key]);
             });
           });
-      });
+      })
+      .catch(e => console.error('ERR', e));
   });
-
 });

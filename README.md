@@ -19,3 +19,7 @@ run `npm test` to check all test.
 
 - How do you run tests?<br>
   run `npm test`
+
+## UML
+
+![](./assert/data-model-with-mongodb.jpeg)

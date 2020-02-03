@@ -1,14 +1,15 @@
+/* eslint-disable new-cap */
+/* eslint-disable camelcase */
 
 // eslint-disable-next-line strict
 'use strict';
 
 const mongoose = require('mongoose');
 
-const product = mongoose.Schema({
-  name: { type: String, required: true },
-  price: { type: Number},
-  company: {type: String, required: true},
-  type: { type: String, required: true, enum: ['electronic', 'furniture'] }
+const products = mongoose.Schema({
+  price: { type: 'number', required: true },
+  weight: Number,
+  quantity_in_stock: { type: 'number', required: true },
 });
 
-module.exports = mongoose.model('product', product);
+module.exports = mongoose.model('products', products);
